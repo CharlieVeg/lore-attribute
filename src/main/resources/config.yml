@@ -1,0 +1,53 @@
+# LoreAttribute Plugin Configuration - 简化版本
+# 只保留核心功能配置，所有属性通过lore自动识别
+
+# 战斗背包配置
+BattleInventory:
+  Title: "战斗背包"
+  ItemName: "&c战斗背包"
+  ItemLore:
+    - "§e什么是战斗背包？"
+    - "§7战斗背包向你提供一个额外的5格物品栏"
+    - "§7你可以把特定装备放入特定位置增加自身属性"
+    - "§7但这些装备在你死亡时和你的背包的装备一样处理哦~"
+
+Messages:
+  InvalidSlot: "&c该位置不能放入此物品，请放入正确位置！"
+  ShiftClick: "&c禁止在战斗背包界面使用Shift键与键盘按键快捷拖动物品！"
+  NoPermission: "&c你没有权限执行此命令！"
+  ItemRequired: "&c请手持一个物品！"
+  InvalidValue: "&c无效的数值！"
+  AttributeAdded: "&a成功为物品添加属性: {attribute} +{value}"
+  AttributeSet: "&a成功为物品设置属性: {attribute} = {value}"
+  ConfigReloaded: "&a配置文件已重载！"
+  
+  Combat:
+    Dodge: "&9闪避！闪避掉来自敌人的 &a{damage} &6点伤害！"
+    AtDodge: "&c被敌人闪避掉 &a{damage} &c点伤害！"
+    Crit: "&6暴击！对敌人造成 &a{damage} &6点伤害！"
+    Block: "&6格挡！格挡掉敌人的伤害！"
+    Injury: "&c反伤！返还给敌人十分之一伤害的真实伤害！"
+    AtBlock: "&c格挡！被敌人格挡一次伤害！"
+    AtInjury: "&c反伤！被反伤到本次伤害十分之一的真实伤害！"
+    Weaken: "&c您被敌人弱化了，两秒内您的伤害将会被降低40%！"
+    LifeSteal: "&a生命偷取！恢复 &e{damage} &a点生命值！"
+    AoeHit: "&c被范围攻击击中，受到 &e{damage} &c点伤害！"
+    AoeAttack: "&6范围攻击命中 &e{damage} &6个目标！"
+
+AttributeUpdate:
+  # 是否启用自动属性更新
+  Enabled: true
+  # 更新间隔（tick，20tick = 1秒）
+  Interval: 20
+  UpdateOnEquipChange: true
+  UpdateOnItemChange: true
+
+UI:
+  AttributeViewer:
+    Title: "&6玩家属性信息"
+    Size: 54
+  
+  BattleInventoryDecoration:
+    Material: "STAINED_GLASS_PANE"
+    Data: 7
+    Name: " " 
